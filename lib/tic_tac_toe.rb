@@ -82,11 +82,22 @@ def winner(board)
   end
 end
 
+# def play(board)
+#   display_board(board)
+#   until over?(board)
+#     turn(board)
+#     break if draw?(board)
+#   end
+#   if won?(board)
+#     puts "Congratulations #{winner(board)}!"
+#   elsif draw?(board)
+#     puts "Cat's Game!"
+#   end
+# end
+
 def play(board)
-  display_board(board)
-  until over?(board)
+  while !over?(board)
     turn(board)
-    break if draw?(board)
   end
   if won?(board)
     puts "Congratulations #{winner(board)}!"
